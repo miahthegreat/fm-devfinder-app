@@ -12,6 +12,7 @@ import moment from "moment";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { FaTwitter } from "react-icons/fa";
 
 export default function Home() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -196,8 +197,8 @@ export default function Home() {
                 <span className="font-bold">{dev.following}</span>
               </div>
             </div>
-            <div className="mt-9 grid w-full grid-cols-1 place-content-center gap-y-2 md:grid-cols-2 md:gap-x-32 md:gap-y-5 lg:ml-[148px] lg:gap-x-0">
-              <div className="flex items-center gap-2 text-[15px] leading-[22px]">
+            <div className="mt-9 grid w-full grid-cols-1 gap-y-2 md:grid-cols-2 md:gap-x-32 md:gap-y-5 lg:ml-[148px] lg:gap-x-0">
+              <div className="flex items-center gap-2 md:text-[14px] md:leading-[20px] lg:text-[15px] lg:leading-[22px]">
                 {dev.location ? (
                   <>
                     <MapPinIcon className="h-5 w-5 text-light-accent dark:text-dark-text" />
@@ -215,10 +216,10 @@ export default function Home() {
                   </>
                 )}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 md:text-[14px] md:leading-[20px] lg:text-[15px] lg:leading-[22px]">
                 {dev.twitter ? (
                   <>
-                    <MapPinIcon className="h-5 w-5 text-light-accent dark:text-dark-text" />
+                    <FaTwitter className="h-5 w-5 text-light-accent dark:text-dark-text" />
 
                     <span className="text-light-accent dark:text-dark-text">
                       {dev.twitter}
@@ -226,18 +227,17 @@ export default function Home() {
                   </>
                 ) : (
                   <>
-                    <MapPinIcon className="h-5 w-5 text-light-accent opacity-50 dark:text-dark-text" />
+                    <FaTwitter className="h-5 w-5 text-light-accent opacity-50 dark:text-dark-text" />
                     <span className="text-light-accent opacity-50 dark:text-dark-text">
                       Not Available
                     </span>
                   </>
                 )}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 md:text-[14px] md:leading-[20px] lg:text-[15px] lg:leading-[22px]">
                 {dev.blog ? (
                   <>
                     <LinkIcon className="h-5 w-5 text-light-accent dark:text-dark-text" />
-
                     <span className="text-light-accent dark:text-dark-text">
                       {dev.blog}
                     </span>
@@ -251,7 +251,7 @@ export default function Home() {
                   </>
                 )}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 md:text-[14px] md:leading-[20px] lg:text-[15px] lg:leading-[22px]">
                 {dev.company ? (
                   <>
                     <BuildingOfficeIcon className="h-5 w-5 text-light-accent dark:text-dark-text" />
