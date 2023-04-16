@@ -141,8 +141,8 @@ export default function Home() {
                 src={dev.avatar_url}
               />
               {/* Dev Info */}
-              <div className="lg:ml-[28px]">
-                <div className="flex w-full items-center gap-28">
+              <div className="flex-grow lg:ml-[28px]">
+                <div className="flex w-full items-center justify-between">
                   {dev.name ? (
                     <span className="text-[26px] font-bold leading-[39px]">
                       {dev.name}
